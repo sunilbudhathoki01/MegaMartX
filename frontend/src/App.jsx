@@ -1,11 +1,14 @@
 import React from "react";
-import Index from "./components/header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/header";
 
 const App = () => {
   return (
-    <>
-      <Index></Index>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header></Header>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
